@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Terrarune", "Terrarune.csproj", "{7DF76A32-95EB-A5CC-7279-2C91D24D2D8F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7DF76A32-95EB-A5CC-7279-2C91D24D2D8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DF76A32-95EB-A5CC-7279-2C91D24D2D8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DF76A32-95EB-A5CC-7279-2C91D24D2D8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DF76A32-95EB-A5CC-7279-2C91D24D2D8F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B2A725BE-5932-4D12-A03F-EA5AFE5E2436}
+	EndGlobalSection
+EndGlobal
