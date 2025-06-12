@@ -1,6 +1,7 @@
 ﻿using Terrarune.Core.ModPlayers;
 using Terraria;
 using Terraria.ID;
+using Terrarune.Common;
 
 namespace Terrarune.Content.Items.Accessories.Vanity
 {
@@ -17,15 +18,13 @@ namespace Terrarune.Content.Items.Accessories.Vanity
 
         public override void UpdateVanity(Player player)
         {
-            TerraruneModPlayer deltarune = player.GetModPlayer<TerraruneModPlayer>();
-            deltarune.KrisKnife = true;
+            player.Terrarune().KrisKnife = true;
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            TerraruneModPlayer deltarune = player.GetModPlayer<TerraruneModPlayer>();
             if (!hideVisual)
-                deltarune.KrisKnife = true;
+                player.Terrarune().KrisKnife = true;
         }
     }
 }
