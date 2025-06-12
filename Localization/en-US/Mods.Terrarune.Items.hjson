@@ -1,10 +1,9 @@
 KrisKnife: {
-		DisplayName: Kris's Knife
-		Tooltip: ""
+	DisplayName: Kris's Knife
+	Tooltip: ""
 }
 
 SusieChalk: {
-		DisplayName: Susie's Chalk
-		Tooltip: ""
+	DisplayName: Susie's Chalk
+	Tooltip: ""
 }
-

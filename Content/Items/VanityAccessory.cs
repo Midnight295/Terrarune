@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Terraria.ID;
 using Terraria;
 using Terraria.ModLoader;
+using Terraria.DataStructures;
 
 namespace Terrarune.Content.Items
 {
@@ -37,5 +38,7 @@ namespace Terrarune.Content.Items
             int equipSlotLegs = EquipLoader.GetEquipSlot(Mod, Name, EquipType.Legs);
             ArmorIDs.Legs.Sets.HidesBottomSkin[equipSlotLegs] = true;
         }
+
+        public virtual void ModifyDrawInfo(ref PlayerDrawSet drawInfo) { }
     }
 }

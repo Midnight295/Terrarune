@@ -1,9 +1,12 @@
-﻿using System;
+﻿using Microsoft.Xna.Framework.Graphics;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Terraria;
+using Terraria.DataStructures;
 using Terraria.ModLoader;
+using Terrarune.Common;
+using Terrarune.Content.Items;
 
 namespace Terrarune.Core.ModPlayers
 {
@@ -11,22 +14,57 @@ namespace Terrarune.Core.ModPlayers
     {
         public bool KrisKnife;
         public bool SusieChalk;
+        ModItem currentVanityAccessory;
 
-        public override void FrameEffects()
+        public override void Load()
         {
-            if (KrisKnife)
+            On_Player.UpdateVisibleAccessory += UpdateVanity;
+        }
+
+        private void UpdateVanity(On_Player.orig_UpdateVisibleAccessory orig, Player self, int itemSlot, Item item, bool modded)
+        {
+            orig(self, itemSlot, item, modded);
+
+            if (item.ModItem is VanityAccessory vanity)
             {
-                Player.legs = EquipLoader.GetEquipSlot(Mod, "KrisKnife", EquipType.Legs);
-                Player.body = EquipLoader.GetEquipSlot(Mod, "KrisKnife", EquipType.Body);
-                Player.head = EquipLoader.GetEquipSlot(Mod, "KrisKnife", EquipType.Head);
+                self.legs = EquipLoader.GetEquipSlot(Mod, item.ModItem.Name, EquipType.Legs);
+                self.body = EquipLoader.GetEquipSlot(Mod, item.ModItem.Name, EquipType.Body);
+                self.head = EquipLoader.GetEquipSlot(Mod, item.ModItem.Name, EquipType.Head);
             }
 
-            if (SusieChalk)
+            if (itemSlot == 18)
             {
-                Player.legs = EquipLoader.GetEquipSlot(Mod, "SusieChalk", EquipType.Legs);
-                Player.body = EquipLoader.GetEquipSlot(Mod, "SusieChalk", EquipType.Body);
-                Player.head = EquipLoader.GetEquipSlot(Mod, "SusieChalk", EquipType.Head);
+                if (self.head == -1)
+                {
+                    self.Terrarune().currentVanityAccessory = null;
+                    return;
+                }
+
+                if (EquipLoader.GetEquipTexture(EquipType.Head, self.head) == null)
+                {
+                    self.Terrarune().currentVanityAccessory = null;
+                    return;
+                }
+
+                ModItem headItem = EquipLoader.GetEquipTexture(EquipType.Head, self.head).Item;
+
+                if (headItem is VanityAccessory)
+                    self.Terrarune().currentVanityAccessory = headItem;
+                else
+                    self.Terrarune().currentVanityAccessory = null;
             }
+        }
+
+        public override void UpdateAutopause()
+        {
+            if (currentVanityAccessory != null)
+                Player.head = EquipLoader.GetEquipSlot(Mod, currentVanityAccessory.Name, EquipType.Head);
+        }
+
+        public override void ModifyDrawInfo(ref PlayerDrawSet drawInfo)
+        {
+            if (currentVanityAccessory != null)
+                ((VanityAccessory)currentVanityAccessory).ModifyDrawInfo(ref drawInfo);
         }
 
         public override void ResetEffects()
