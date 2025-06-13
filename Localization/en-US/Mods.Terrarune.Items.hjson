@@ -7,3 +7,13 @@ SusieChalk: {
 	DisplayName: Susie's Chalk
 	Tooltip: ""
 }
+
+AmberCard: {
+	DisplayName: Amber Card
+	Tooltip: ""
+}
+
+SilverCard: {
+	DisplayName: Silver Card
+	Tooltip: ""
+}

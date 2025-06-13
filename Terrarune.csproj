@@ -7,6 +7,10 @@
 	<PropertyGroup>
 		
 	</PropertyGroup>
+	<ItemGroup>
+	  <None Remove="Content\Items\Accessories\Functional\AmberCard.png" />
+	  <None Remove="Content\Items\Accessories\Functional\SilverCard.png" />
+	</ItemGroup>
 
 	<!-- References -->
 
