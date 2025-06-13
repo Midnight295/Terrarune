@@ -10,11 +10,25 @@ namespace Terrarune.Core.ModPlayers
     {
         public bool KrisKnife;
         public bool SusieChalk;
+        public int SusieLaughCounter = 0;
+
         ModItem currentVanityAccessory;
 
         public override void Load()
         {
             On_Player.UpdateVisibleAccessory += UpdateVanity;
+        }
+
+
+        public override void PreUpdate()
+        {
+            if (SusieLaughCounter > 0)
+                SusieLaughCounter--;
+        }
+
+        public override void UpdateDead()
+        {
+            SusieLaughCounter = 0;
         }
 
         private void UpdateVanity(On_Player.orig_UpdateVisibleAccessory orig, Player self, int itemSlot, Item item, bool modded)
