@@ -1,4 +1,5 @@
 ﻿using Terraria;
+using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
 using Terrarune.Common;
@@ -11,6 +12,7 @@ namespace Terrarune.Core.ModPlayers
         public bool KrisKnife;
         public bool SusieChalk;
         public int SusieLaughCounter = 0;
+        SoundStyle SusieLaugh = new("Terrarune/Assets/Sounds/SusieLaugh");
 
         ModItem currentVanityAccessory;
 
@@ -23,7 +25,11 @@ namespace Terrarune.Core.ModPlayers
         public override void PreUpdate()
         {
             if (SusieLaughCounter > 0)
+            {
+                if(SusieLaughCounter == 90)
+                    SoundEngine.PlaySound(SusieLaugh, Player.Center);
                 SusieLaughCounter--;
+            }
         }
 
         public override void UpdateDead()

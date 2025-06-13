@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
+using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terrarune.Common;
@@ -17,7 +18,7 @@ namespace Terrarune.Content.Items.Accessories.Vanity
 
         public int AnimationLength => 3;
 
-        public int AnimationDelay => 10;
+        public int AnimationDelay => 15;
 
         public bool Animate(Player player, ref int frameNum)
         {
