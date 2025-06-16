@@ -8,6 +8,16 @@ SusieChalk: {
 	Tooltip: ""
 }
 
+AmberCard: {
+	DisplayName: Amber Card
+	Tooltip: ""
+}
+
+SilverCard: {
+	DisplayName: Silver Card
+	Tooltip: ""
+}
+
 Halbird: {
 	DisplayName: Halbird
 	Tooltip: ""

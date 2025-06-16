@@ -14,13 +14,6 @@ public interface IAnimatedHead
 
     Color? CustomDrawColor => null;
 
-    void Animate(Player player, ref int frameNum) {
-        if (player.miscCounter % AnimationDelay == 0)
-        {
-            frameNum++;
-            if (frameNum >= AnimationLength)
-                frameNum = 0;
-        }
-    }
+    bool Animate(Player player, ref int frameNum);
     bool PreDraw(PlayerDrawSet drawInfo) => true;
 }
