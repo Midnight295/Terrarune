@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Terraria;
+using Terraria.Audio;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -16,13 +17,14 @@ namespace Terrarune.Content.Projectiles
 {
     public class BerdSine : ModProjectile
     {
+        private static int TimeLeft = 1000;
         public override void SetDefaults()
         {
             Projectile.friendly = true;
             Projectile.tileCollide = false;
             Projectile.width = Projectile.height = 20;
             Projectile.DamageType = DamageClass.Melee;
-            Projectile.timeLeft = 1000;
+            Projectile.timeLeft = TimeLeft;
             Projectile.scale = 2.3f;
             Projectile.usesLocalNPCImmunity = true;
             Projectile.localNPCHitCooldown = 4;
@@ -44,11 +46,17 @@ namespace Terrarune.Content.Projectiles
             Player owner = Main.player[0];
             if (Projectile.ai[0] == 0)
             {
+                int dir = Main.rand.NextBool() ? 1 : -1;
                 point2 = Main.MouseWorld;
-                point1 = Projectile.Center + (owner.AngleTo(Main.MouseWorld).ToRotationVector2() * owner.Distance(Main.MouseWorld)  * 0.2f) + (owner.AngleTo(Main.MouseWorld) + MathHelper.PiOver2).ToRotationVector2() * (Main.rand.NextFloat(30, 200) * (Main.rand.NextBool() ? 1 : -1));
+                point1 = Projectile.Center + (owner.AngleTo(Main.MouseWorld).ToRotationVector2() * owner.Distance(Main.MouseWorld)  * 0.2f) + (owner.AngleTo(Main.MouseWorld) + MathHelper.PiOver2).ToRotationVector2() * (Main.rand.NextFloat(30, 200) * dir);
                 point3 = point2 - (point1 - point2);
-                point4 = Projectile.Center + (owner.AngleTo(Main.MouseWorld).ToRotationVector2() * owner.Distance(Main.MouseWorld) *2.3f) + (owner.AngleTo(Main.MouseWorld) + MathHelper.PiOver2).ToRotationVector2() * (Main.rand.NextFloat(30, 200) * (Main.rand.NextBool() ? 1 : -1));
+                point4 = Projectile.Center + (owner.AngleTo(Main.MouseWorld).ToRotationVector2() * owner.Distance(Main.MouseWorld) *2f) + (owner.AngleTo(Main.MouseWorld) + MathHelper.PiOver2).ToRotationVector2() * (Main.rand.NextFloat(30, 200) * -dir);
                 Projectile.ai[0]++;
+                
+            }
+            if (Projectile.timeLeft % 8 == 0 && Projectile.timeLeft > TimeLeft - (Projectile.ai[2] * 0.66f))
+            {
+                SoundEngine.PlaySound(new SoundStyle("Terrarune/Assets/Sounds/HaliberdFire") with { MaxInstances = 1, SoundLimitBehavior = SoundLimitBehavior.ReplaceOldest }, Projectile.Center);
             }
             Vector2 targetPos = point1;
             if (Projectile.ai[0] == 1)
@@ -92,7 +100,7 @@ namespace Terrarune.Content.Projectiles
                 {
                     Projectile.timeLeft = Projectile.oldPos.Length;
                 }
-                if (Projectile.oldPos[Projectile.oldPos.Length - 1] == Projectile.position)
+                if (Projectile.oldPos[(int)Projectile.ai[2]-1] == Projectile.position)
                 {
                     Projectile.Kill();
                 }
@@ -107,11 +115,11 @@ namespace Terrarune.Content.Projectiles
         public override bool PreDraw(ref Color lightColor)
         {
             Asset<Texture2D> t = TextureAssets.Projectile[Type];
-            for (int i = 0; i < Projectile.oldPos.Length; i++)
+            for (int i = 0; i < Projectile.ai[2]; i++)
             {
-                if (i % 2 == 0 && (30 - i) < Projectile.timeLeft)
+                if (i % 2 == 0 && (Projectile.ai[2] - i) < Projectile.timeLeft)
                 {
-                    float opacity = i > 20 ? (1 - ((i - 20) / 10f)) : 1;
+                    float opacity = i > (Projectile.ai[2] * 0.66f) ? (1 - ((i - (Projectile.ai[2] * 0.66f)) / (Projectile.ai[2] * 0.33f))) : 1;
                     Main.EntitySpriteDraw(t.Value, Projectile.oldPos[i] + Projectile.Size / 2 - Main.screenPosition, null, lightColor * opacity, Projectile.oldRot[i], t.Size() / 2, Projectile.scale, SpriteEffects.None);
                 }
             }
