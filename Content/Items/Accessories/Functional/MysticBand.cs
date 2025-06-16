@@ -9,7 +9,7 @@ using Terraria.ModLoader;
 
 namespace Terrarune.Content.Items.Accessories.Functional
 {
-    public class SilverCard : ModItem
+    internal class MysticBand : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -17,26 +17,29 @@ namespace Terrarune.Content.Items.Accessories.Functional
         }
         public override void SetDefaults()
         {
-            Item.width = 16;
-            Item.height = 20;
+            Item.width = 26;
+            Item.height = 26;
             Item.maxStack = 1;
-            Item.value = Item.sellPrice(0, 0, 1, 0); 
+            Item.value = Item.sellPrice(0, 0, 2, 17);
             Item.rare = ItemRarityID.Blue;
 
             Item.accessory = true;
-            Item.defense = 4;
         }
 
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
-            recipe.AddIngredient<AmberCard>(2);
-            recipe.AddTile(TileID.TinkerersWorkbench);
+            recipe.AddIngredient(ItemID.BandofStarpower, 1);
+            recipe.AddIngredient(ItemID.SilverBar, 3);
+            recipe.AddIngredient(ItemID.Amber, 1);
+            recipe.AddTile(TileID.Anvils);
             recipe.Register();
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
+            player.GetDamage(DamageClass.Magic) += 0.06f;
+
             base.UpdateAccessory(player, hideVisual);
         }
     }

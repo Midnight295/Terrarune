@@ -10,7 +10,7 @@ SusieChalk: {
 
 AmberCard: {
 	DisplayName: Amber Card
-	Tooltip: ""
+	Tooltip: "'It's sticky..'"
 }
 
 SilverCard: {
@@ -26,4 +26,22 @@ Halbird: {
 Haliberd: {
 	DisplayName: Haliberd
 	Tooltip: ""
+}
+
+MysticBand: {
+	DisplayName: Mystic Band
+	Tooltip: 
+		'''
+		6% increased magic damage
+		'You only feel your magic increase'
+		'''
+}
+
+PowerBand: {
+	DisplayName: Power Band
+	Tooltip: 
+		'''
+		6% increased melee damage
+		'You only feel your strength increase'
+		'''
 }
