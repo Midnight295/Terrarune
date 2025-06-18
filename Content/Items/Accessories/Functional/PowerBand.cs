@@ -11,6 +11,7 @@ namespace Terrarune.Content.Items.Accessories.Functional
 {
     internal class PowerBand : ModItem
     {
+        public override string Texture => "Terrarune/Assets/Items/PowerBand";
         public override void SetStaticDefaults()
         {
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;

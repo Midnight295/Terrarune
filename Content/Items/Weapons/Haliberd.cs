@@ -19,6 +19,7 @@ namespace Terrarune.Content.Items.Weapons
 {
     public class Haliberd : ModItem
     {
+        public override string Texture => "Terrarune/Assets/Weapons/Haliberd";
         public override void SetDefaults()
         {
             Item.width = Item.height = 20;
@@ -124,7 +125,7 @@ namespace Terrarune.Content.Items.Weapons
             SpriteEffects effect = SpriteEffects.None;
             if (player.direction == -1) effect = SpriteEffects.FlipHorizontally;
             //has 13 frames
-            Asset<Texture2D> t = ModContent.Request<Texture2D>("Terrarune/Content/Items/Weapons/Haliberd-Sheet");
+            Asset<Texture2D> t = ModContent.Request<Texture2D>("Terrarune/Assets/Weapons/Haliberd-Sheet");
             Rectangle frame = new Rectangle(0, 0, t.Width(), t.Height() / 13);
             if (animation > player.itemAnimationMax * spinTime)
             {

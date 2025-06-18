@@ -11,6 +11,7 @@ namespace Terrarune.Content.Items.Accessories.Functional
 {
     public class AmberCard : ModItem
     {
+        public override string Texture => "Terrarune/Assets/Items/AmberCard";
         public override void SetStaticDefaults()
         {
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;

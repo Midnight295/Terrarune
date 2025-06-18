@@ -11,6 +11,7 @@ namespace Terrarune.Content.Items.Accessories.Functional
 {
     internal class MysticBand : ModItem
     {
+        public override string Texture => "Terrarune/Assets/Items/MysticBand";
         public override void SetStaticDefaults()
         {
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;

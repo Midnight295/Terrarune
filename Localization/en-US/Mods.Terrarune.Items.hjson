@@ -39,19 +39,14 @@ SilverCard: {
 	Tooltip: ""
 }
 
-Halbird: {
-	DisplayName: Halbird
-	Tooltip: ""
-}
-
 Haliberd: {
-	DisplayName: Haliberd
+	DisplayName: Holy Halbird
 	Tooltip: ""
 }
 
 MysticBand: {
 	DisplayName: Mystic Band
-	Tooltip: 
+	Tooltip:
 		'''
 		6% increased magic damage
 		'You only feel your magic increase'
@@ -60,7 +55,7 @@ MysticBand: {
 
 PowerBand: {
 	DisplayName: Power Band
-	Tooltip: 
+	Tooltip:
 		'''
 		6% increased melee damage
 		'You only feel your strength increase'

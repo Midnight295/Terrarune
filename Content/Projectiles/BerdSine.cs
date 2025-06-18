@@ -17,6 +17,8 @@ namespace Terrarune.Content.Projectiles
 {
     public class BerdSine : ModProjectile
     {
+        public override string Texture => "Terrarune/Assets/Projectiles/BerdSine";
+
         private static int TimeLeft = 1000;
         public override void SetDefaults()
         {
