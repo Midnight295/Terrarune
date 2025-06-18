@@ -11,6 +11,8 @@ namespace Terrarune.Core.ModPlayers
     {
         public bool KrisKnife;
         public bool SusieChalk;
+        public bool FluffyHat;
+        public bool HornedHeadband;
         public int SusieLaughCounter = 0;
         SoundStyle SusieLaugh = new("Terrarune/Assets/Sounds/SusieLaugh");
 
