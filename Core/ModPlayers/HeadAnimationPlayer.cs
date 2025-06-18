@@ -1,4 +1,5 @@
-﻿using Terraria.ModLoader;
+﻿using Terraria;
+using Terraria.ModLoader;
 using Terrarune.Core.ModPlayers.DrawLayers;
 
 namespace Terrarune.Core.ModPlayers;
@@ -23,7 +24,17 @@ public class HeadAnimationPlayer : ModPlayer
         ModItem headItem = EquipLoader.GetEquipTexture(EquipType.Head, Player.head).Item;
 
         if (headItem is IAnimatedHead animated)
-            animated.Animate(Player, ref animationFrameNum);
+        {
+            if (animated.Animate(Player, ref animationFrameNum))
+            {
+                if (Player.miscCounter % animated.AnimationDelay == 0)
+                {
+                    animationFrameNum++;
+                    if (animationFrameNum >= animated.AnimationLength)
+                        animationFrameNum = 0;
+                }
+            }
+        }
         else
             animationFrameNum = 0;
     }

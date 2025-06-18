@@ -28,3 +28,41 @@ HornedHeadband: {
 	DisplayName: Horned Headband
 	Tooltip: ""
 }
+
+AmberCard: {
+	DisplayName: Amber Card
+	Tooltip: "'It's sticky..'"
+}
+
+SilverCard: {
+	DisplayName: Silver Card
+	Tooltip: ""
+}
+
+Halbird: {
+	DisplayName: Halbird
+	Tooltip: ""
+}
+
+Haliberd: {
+	DisplayName: Haliberd
+	Tooltip: ""
+}
+
+MysticBand: {
+	DisplayName: Mystic Band
+	Tooltip: 
+		'''
+		6% increased magic damage
+		'You only feel your magic increase'
+		'''
+}
+
+PowerBand: {
+	DisplayName: Power Band
+	Tooltip: 
+		'''
+		6% increased melee damage
+		'You only feel your strength increase'
+		'''
+}
