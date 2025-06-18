@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terrarune.Common;
+using Terraria.ModLoader;
 
 namespace Terrarune.Content.Items.Accessories.Vanity
 {
@@ -14,6 +15,13 @@ namespace Terrarune.Content.Items.Accessories.Vanity
             Item.accessory = true;
             Item.rare = ItemRarityID.Purple;
             Item.vanity = true;
+        }
+
+        public override bool CanAccessoryBeEquippedWith(Item equippedItem, Item incomingItem, Player player)
+        {
+            return incomingItem.type != ModContent.ItemType<FluffyHat>() &&
+                incomingItem.type != ModContent.ItemType<KrisKnife>() &&
+                incomingItem.type != ModContent.ItemType<HornedHeadband>();
         }
 
         public override void UpdateVanity(Player player)

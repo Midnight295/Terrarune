@@ -1,9 +1,30 @@
 KrisKnife: {
-	DisplayName: Kris's Knife
+	DisplayName: Pie Knife
 	Tooltip: ""
 }
 
 SusieChalk: {
-	DisplayName: Susie's Chalk
+	DisplayName: Tasty Chalk
+	Tooltip: ""
+}
+
+ManeAx: {
+	DisplayName: Mane Ax
+	Tooltip:
+		'''
+		Graze projectiles to buildup TP.
+		Holding Right Click expends 60% of your TP to cast Rude Buster.
+		Timing a right click press right before Rude Buster hits an enemy increases damage.
+		'Dunno how I got an ax but, like, that's cool.'
+		'''
+}
+
+FluffyHat: {
+	DisplayName: Fluffy Hat
+	Tooltip: ""
+}
+
+HornedHeadband: {
+	DisplayName: Horned Headband
 	Tooltip: ""
 }

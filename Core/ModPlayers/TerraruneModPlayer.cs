@@ -10,6 +10,8 @@ namespace Terrarune.Core.ModPlayers
     {
         public bool KrisKnife;
         public bool SusieChalk;
+        public bool FluffyHat;
+        public bool HornedHeadband;
         ModItem currentVanityAccessory;
 
         public override void Load()
@@ -67,6 +69,8 @@ namespace Terrarune.Core.ModPlayers
         {
             KrisKnife = false;
             SusieChalk = false;
+            FluffyHat = false;
+            HornedHeadband = false;
         }
     }
 }
