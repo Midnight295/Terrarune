@@ -41,7 +41,7 @@ SilverCard: {
 
 Haliberd: {
 	DisplayName: Holy Halbird
-	Tooltip: ""
+	Tooltip: Fires a Smartness Wave that moves according to the Function
 }
 
 MysticBand: {

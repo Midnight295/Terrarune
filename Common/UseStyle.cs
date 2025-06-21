@@ -18,6 +18,7 @@ namespace Terrarune.Common
     {
         public float PercentTrickIntoSwinging;
         public float altTimeMultiplyer = 1f;
+        
         /// <summary>
         /// override this to change what actually physically happens during the use style
         /// </summary>

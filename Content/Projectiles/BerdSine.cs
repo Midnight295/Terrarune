@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,6 +39,20 @@ namespace Terrarune.Content.Projectiles
             ProjectileID.Sets.TrailCacheLength[Type] = 30;
             ProjectileID.Sets.TrailingMode[Type] = 2;
         }
+        public override void SendExtraAI(BinaryWriter writer)
+        {
+            writer.WriteVector2(point1);
+            writer.WriteVector2(point2);
+            writer.WriteVector2(point3);
+            writer.WriteVector2(point4);
+        }
+        public override void ReceiveExtraAI(BinaryReader reader)
+        {
+            point1 = reader.ReadVector2();
+            point2 = reader.ReadVector2();
+            point3 = reader.ReadVector2();
+            point4 = reader.ReadVector2();
+        }
         public Vector2 point1;
         public Vector2 point2;
         public Vector2 point3;
@@ -45,8 +60,8 @@ namespace Terrarune.Content.Projectiles
         public override void AI()
         {
             //change to .owner when done testing
-            Player owner = Main.player[0];
-            if (Projectile.ai[0] == 0)
+            Player owner = Main.player[Projectile.owner];
+            if (owner.whoAmI == Main.myPlayer && Projectile.ai[0] == 0)
             {
                 int dir = Main.rand.NextBool() ? 1 : -1;
                 point2 = Main.MouseWorld;
@@ -54,11 +69,11 @@ namespace Terrarune.Content.Projectiles
                 point3 = point2 - (point1 - point2);
                 point4 = Projectile.Center + (owner.AngleTo(Main.MouseWorld).ToRotationVector2() * owner.Distance(Main.MouseWorld) *2f) + (owner.AngleTo(Main.MouseWorld) + MathHelper.PiOver2).ToRotationVector2() * (Main.rand.NextFloat(30, 200) * -dir);
                 Projectile.ai[0]++;
-                
+                Projectile.netUpdate = true;
             }
-            if (Projectile.timeLeft % 8 == 0 && Projectile.timeLeft > TimeLeft - (Projectile.ai[2] * 0.66f))
+            if (Projectile.timeLeft % 8 == 0 && Projectile.timeLeft > TimeLeft - (Projectile.ai[2] * 0.66f) && Main.netMode != NetmodeID.Server)
             {
-                SoundEngine.PlaySound(new SoundStyle("Terrarune/Assets/Sounds/HaliberdFire") with { MaxInstances = 1, SoundLimitBehavior = SoundLimitBehavior.ReplaceOldest }, Projectile.Center);
+                SoundEngine.PlaySound(new SoundStyle("Terrarune/Assets/Sounds/HaliberdFire") with { MaxInstances = 1, SoundLimitBehavior = SoundLimitBehavior.ReplaceOldest, Volume = 0.3f}, Projectile.Center);
             }
             Vector2 targetPos = point1;
             if (Projectile.ai[0] == 1)
