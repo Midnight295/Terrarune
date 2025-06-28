@@ -29,6 +29,11 @@ HornedHeadband: {
 	Tooltip: ""
 }
 
+BerdlyGrade: {
+	DisplayName: A+ Test
+	Tooltip: ""
+}
+
 AmberCard: {
 	DisplayName: Amber Card
 	Tooltip: "'It's sticky..'"
