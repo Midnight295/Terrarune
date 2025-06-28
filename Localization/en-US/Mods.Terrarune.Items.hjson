@@ -36,7 +36,7 @@ AmberCard: {
 
 SilverCard: {
 	DisplayName: Silver Card
-	Tooltip: ""
+	Tooltip: Extra credit not yet included, Sorry!
 }
 
 Haliberd: {
@@ -60,4 +60,19 @@ PowerBand: {
 		6% increased melee damage
 		'You only feel your strength increase'
 		'''
+}
+
+CyberVisor: {
+	DisplayName: Cyber Visor
+	Tooltip: ""
+}
+
+HometownJacket: {
+	DisplayName: Hometown Jacket
+	Tooltip: ""
+}
+
+HometownSweater: {
+	DisplayName: Hometown Sweater
+	Tooltip: ""
 }
