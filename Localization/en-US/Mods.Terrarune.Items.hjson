@@ -36,12 +36,12 @@ AmberCard: {
 
 SilverCard: {
 	DisplayName: Silver Card
-	Tooltip: ""
+	Tooltip: Extra credit not yet included, Sorry!
 }
 
 Haliberd: {
 	DisplayName: Holy Halbird
-	Tooltip: ""
+	Tooltip: Fires a Smartness Wave that moves according to the Function
 }
 
 MysticBand: {
@@ -62,7 +62,17 @@ PowerBand: {
 		'''
 }
 
-BerdlyGrade: {
-	DisplayName: A+ Test
+CyberVisor: {
+	DisplayName: Cyber Visor
+	Tooltip: ""
+}
+
+HometownJacket: {
+	DisplayName: Hometown Jacket
+	Tooltip: ""
+}
+
+HometownSweater: {
+	DisplayName: Hometown Sweater
 	Tooltip: ""
 }
