@@ -13,6 +13,7 @@ namespace Terrarune.Core.ModPlayers
         public bool SusieChalk;
         public bool FluffyHat;
         public bool HornedHeadband;
+        public bool BerdlyGrade;
         public int SusieLaughCounter = 0;
         SoundStyle SusieLaugh = new("Terrarune/Assets/Sounds/SusieLaugh");
 
@@ -91,6 +92,7 @@ namespace Terrarune.Core.ModPlayers
             SusieChalk = false;
             FluffyHat = false;
             HornedHeadband = false;
+            BerdlyGrade = false;
         }
     }
 }

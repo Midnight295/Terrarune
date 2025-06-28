@@ -37,7 +37,8 @@ namespace Terrarune.Content.Items.Accessories.Vanity
         {
             return incomingItem.type != ModContent.ItemType<HornedHeadband>() &&
                 incomingItem.type != ModContent.ItemType<KrisKnife>() &&
-                incomingItem.type != ModContent.ItemType<SusieChalk>();
+                incomingItem.type != ModContent.ItemType<SusieChalk>() &&
+                incomingItem.type != ModContent.ItemType<BerdlyGrade>();
         }
 
         public override bool CanRightClick() => true;
@@ -81,7 +82,8 @@ namespace Terrarune.Content.Items.Accessories.Vanity
         {   
             return incomingItem.type != ModContent.ItemType<FluffyHat>() && 
                 incomingItem.type != ModContent.ItemType<KrisKnife>() && 
-                incomingItem.type != ModContent.ItemType<SusieChalk>();
+                incomingItem.type != ModContent.ItemType<SusieChalk>() &&
+                incomingItem.type != ModContent.ItemType<BerdlyGrade>();
         }
 
         public override bool CanRightClick() => true;

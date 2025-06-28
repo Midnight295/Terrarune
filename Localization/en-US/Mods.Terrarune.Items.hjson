@@ -61,3 +61,8 @@ PowerBand: {
 		'You only feel your strength increase'
 		'''
 }
+
+BerdlyGrade: {
+	DisplayName: A+ Test
+	Tooltip: ""
+}

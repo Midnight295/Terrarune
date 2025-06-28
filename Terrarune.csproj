@@ -11,6 +11,9 @@
 	  <None Remove="Content\Items\Accessories\Functional\AmberCard.png" />
 	  <None Remove="Content\Items\Accessories\Functional\SilverCard.png" />
 	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Assets\UI\" />
+	</ItemGroup>
 
 	<!-- References -->
 

@@ -1,19 +1,23 @@
-﻿using Terrarune.Core.ModPlayers;
-using Terraria;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Terraria.ID;
-using Terrarune.Common;
 using Terraria.ModLoader;
+using Terraria;
+using Terrarune.Common;
 
 namespace Terrarune.Content.Items.Accessories.Vanity
 {
-    public class KrisKnife : VanityAccessory
+    public class BerdlyGrade : VanityAccessory
     {
-        public override string Texture => "Terrarune/Assets/Items/Vanity/KrisKnife/KrisKnife";
+        public override string Texture => "Terrarune/Assets/Items/Vanity/BerdlyGrade/BerdlyGrade";
 
         public override void SetDefaults()
         {
             Item.accessory = true;
-            Item.rare = ItemRarityID.Red;
+            Item.rare = ItemRarityID.Green;
             Item.vanity = true;
         }
 
@@ -22,18 +26,18 @@ namespace Terrarune.Content.Items.Accessories.Vanity
             return incomingItem.type != ModContent.ItemType<FluffyHat>() &&
                 incomingItem.type != ModContent.ItemType<HornedHeadband>() &&
                 incomingItem.type != ModContent.ItemType<SusieChalk>() &&
-                incomingItem.type != ModContent.ItemType<BerdlyGrade>();
+                incomingItem.type != ModContent.ItemType<KrisKnife>();
         }
 
         public override void UpdateVanity(Player player)
         {
-            player.Terrarune().KrisKnife = true;
+            player.Terrarune().BerdlyGrade = true;
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             if (!hideVisual)
-                player.Terrarune().KrisKnife = true;
+                player.Terrarune().BerdlyGrade = true;
         }
     }
 }
