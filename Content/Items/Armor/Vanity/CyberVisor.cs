@@ -16,6 +16,9 @@ namespace Terrarune.Content.Items.Armor.Vanity
         public override void SetStaticDefaults()
         {
             Terraria.GameContent.Creative.CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+
+            if (Main.netMode != NetmodeID.Server)
+                ArmorIDs.Head.Sets.DrawFullHair[Item.headSlot] = true;
         }
 
         public override void SetDefaults()

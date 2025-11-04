@@ -1,11 +1,11 @@
 KrisKnife: {
 	DisplayName: Pie Knife
-	Tooltip: ""
+	Tooltip: "'Smells of butterscotch and cinnamon'"
 }
 
 SusieChalk: {
 	DisplayName: Tasty Chalk
-	Tooltip: ""
+	Tooltip: "'If only you had a jar of salsa to enjoy this with..'"
 }
 
 ManeAx: {
@@ -21,7 +21,7 @@ ManeAx: {
 
 FluffyHat: {
 	DisplayName: Fluffy Hat
-	Tooltip: ""
+	Tooltip: "'Great for hiding your head in!'"
 }
 
 HornedHeadband: {
@@ -31,7 +31,10 @@ HornedHeadband: {
 
 BerdlyGrade: {
 	DisplayName: A+ Test
-	Tooltip: ""
+	Tooltip:
+		'''
+		'Its of a spelling bee, you can tell the student can flawlessly spell "bee"'
+		'''
 }
 
 AmberCard: {
@@ -41,7 +44,7 @@ AmberCard: {
 
 SilverCard: {
 	DisplayName: Silver Card
-	Tooltip: Extra credit not yet included, Sorry!
+	Tooltip: "Extra credit not yet included, Sorry!"
 }
 
 Haliberd: {
@@ -69,15 +72,15 @@ PowerBand: {
 
 CyberVisor: {
 	DisplayName: Cyber Visor
-	Tooltip: ""
+	Tooltip: "'Wavedash tech not included'"
 }
 
 HometownJacket: {
 	DisplayName: Hometown Jacket
-	Tooltip: ""
+	Tooltip: "'Smells like apples'"
 }
 
 HometownSweater: {
 	DisplayName: Hometown Sweater
-	Tooltip: ""
+	Tooltip: "'Theres a milk stain on it.."
 }
