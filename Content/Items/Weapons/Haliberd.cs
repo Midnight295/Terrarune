@@ -22,10 +22,7 @@ namespace Terrarune.Content.Items.Weapons
     {
         public override string Texture => "Terrarune/Assets/Weapons/Haliberd";
 
-        public override bool IsLoadingEnabled(Mod mod)
-        {
-            return false;
-        }
+        public override bool IsLoadingEnabled(Mod mod) => false;
         public override void SetDefaults()
         {
             Item.width = Item.height = 20;

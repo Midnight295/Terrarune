@@ -1,1 +1,9 @@
-Modify this file with a description of your mod.
+A mod that adds various DELTARUNE related vanities!
+
+Currently adds vanity items based off of the Fun Gang members! And Berdly.
+
+Developed by: 
+Zarachard, Blastitle, midnight295, Big E, Shipmans AGLA
+
+Other notable supporters:
+Javyz, 

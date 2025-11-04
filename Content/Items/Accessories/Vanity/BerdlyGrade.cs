@@ -17,7 +17,7 @@ namespace Terrarune.Content.Items.Accessories.Vanity
         public override void SetDefaults()
         {
             Item.accessory = true;
-            Item.rare = ItemRarityID.Green;
+            Item.rare = ItemRarityID.Cyan;
             Item.vanity = true;
         }
 
@@ -30,6 +30,14 @@ namespace Terrarune.Content.Items.Accessories.Vanity
         {
             if (!hideVisual)
                 player.Terrarune().BerdlyGrade = true;
+        }
+
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+            .AddIngredient(ItemID.Silk, 15)
+            .AddTile(TileID.Loom)
+            .Register();
         }
     }
 }

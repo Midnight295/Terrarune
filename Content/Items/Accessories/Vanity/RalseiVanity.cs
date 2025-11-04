@@ -33,14 +33,6 @@ namespace Terrarune.Content.Items.Accessories.Vanity
                 player.Terrarune().FluffyHat = true;
         }
 
-        public override bool CanAccessoryBeEquippedWith(Item equippedItem, Item incomingItem, Player player)
-        {
-            return incomingItem.type != ModContent.ItemType<HornedHeadband>() &&
-                incomingItem.type != ModContent.ItemType<KrisKnife>() &&
-                incomingItem.type != ModContent.ItemType<SusieChalk>() &&
-                incomingItem.type != ModContent.ItemType<BerdlyGrade>();
-        }
-
         public override bool CanRightClick() => true;
         public override bool AltFunctionUse(Player player)
         {
@@ -53,6 +45,13 @@ namespace Terrarune.Content.Items.Accessories.Vanity
         {
             SoundEngine.PlaySound(new SoundStyle("Terrarune/Assets/Sounds/Equip"));
             player.ReplaceItem(Item, ModContent.ItemType<HornedHeadband>());
+        }
+
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+            .AddIngredient(ItemID.Silk, 15)
+            .Register();
         }
     }
 
@@ -90,5 +89,6 @@ namespace Terrarune.Content.Items.Accessories.Vanity
             SoundEngine.PlaySound(new SoundStyle("Terrarune/Assets/Sounds/Equip"));
             player.ReplaceItem(Item, ModContent.ItemType<FluffyHat>());
         }
+
     }
 }

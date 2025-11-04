@@ -21,17 +21,25 @@ ManeAx: {
 
 FluffyHat: {
 	DisplayName: Fluffy Hat
-	Tooltip: "'Great for hiding your head in!'"
+	Tooltip:
+		'''
+		Right click to turn into the Horned Headband
+		'Great for hiding your head in!'
+		'''
 }
 
 HornedHeadband: {
 	DisplayName: Horned Headband
-	Tooltip: ""
+	Tooltip:
+		'''
+		Right click to turn into the Fluffy Hat
+		'An old headband seemingly lost by it's original owner'
+		'''
 }
 
 BerdlyGrade: {
 	DisplayName: A+ Test
-	Tooltip: ''''Its of a spelling bee, you can tell the student can flawlessly spell "bee"''''
+	Tooltip: Its of a spelling bee, you can tell the student can flawlessly spell "bee"
 }
 
 AmberCard: {
@@ -80,4 +88,9 @@ HometownJacket: {
 HometownSweater: {
 	DisplayName: Hometown Sweater
 	Tooltip: "'Theres a milk stain on it.."
+}
+
+SilverWatch: {
+	DisplayName: Wristwatch
+	Tooltip: "'Stuck before half past noon'"
 }

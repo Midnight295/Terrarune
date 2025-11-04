@@ -65,5 +65,14 @@ namespace Terrarune.Content.Items.Accessories.Vanity
             if (!hideVisual)
                 player.Terrarune().SusieChalk = true;
         }
+
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+            .AddIngredient(ItemID.StoneBlock, 35)
+            .AddIngredient(ItemID.ClayBlock, 15)
+            .AddTile(TileID.Anvils)
+            .Register();
+        }
     }
 }

@@ -26,5 +26,14 @@ namespace Terrarune.Content.Items.Accessories.Vanity
             if (!hideVisual)
                 player.Terrarune().KrisKnife = true;
         }
+
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+            .AddRecipeGroup(RecipeGroupID.IronBar, 15)
+            .AddRecipeGroup(RecipeGroupID.Fruit, 3)
+            .AddTile(TileID.Anvils)
+            .Register();
+        }
     }
 }
