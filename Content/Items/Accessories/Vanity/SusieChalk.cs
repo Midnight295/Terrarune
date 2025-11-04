@@ -55,15 +55,6 @@ namespace Terrarune.Content.Items.Accessories.Vanity
             Item.rare = ItemRarityID.Purple;
             Item.vanity = true;
         }
-
-        public override bool CanAccessoryBeEquippedWith(Item equippedItem, Item incomingItem, Player player)
-        {
-            return incomingItem.type != ModContent.ItemType<FluffyHat>() &&
-                incomingItem.type != ModContent.ItemType<KrisKnife>() &&
-                incomingItem.type != ModContent.ItemType<HornedHeadband>() &&
-                incomingItem.type != ModContent.ItemType<BerdlyGrade>();
-        }
-
         public override void UpdateVanity(Player player)
         {
             player.Terrarune().SusieChalk = true;

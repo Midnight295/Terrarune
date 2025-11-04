@@ -31,10 +31,7 @@ HornedHeadband: {
 
 BerdlyGrade: {
 	DisplayName: A+ Test
-	Tooltip:
-		'''
-		'Its of a spelling bee, you can tell the student can flawlessly spell "bee"'
-		'''
+	Tooltip: ''''Its of a spelling bee, you can tell the student can flawlessly spell "bee"''''
 }
 
 AmberCard: {
@@ -44,7 +41,7 @@ AmberCard: {
 
 SilverCard: {
 	DisplayName: Silver Card
-	Tooltip: "Extra credit not yet included, Sorry!"
+	Tooltip: Extra credit not yet included, Sorry!
 }
 
 Haliberd: {

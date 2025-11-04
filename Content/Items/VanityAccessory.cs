@@ -7,6 +7,8 @@ using Terraria.ID;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.DataStructures;
+using Terrarune.Common;
+using System.Security.Policy;
 
 namespace Terrarune.Content.Items
 {
@@ -21,6 +23,15 @@ namespace Terrarune.Content.Items
                 EquipLoader.AddEquipTexture(Mod, "Terrarune/Assets/Items/Vanity/" + this.Name + "/" + this.Name + "Legs", EquipType.Legs, this);
             }
 
+        }
+
+        public override bool CanAccessoryBeEquippedWith(Item equippedItem, Item incomingItem, Player player)
+        {   
+            if (incomingItem.ModItem != null && incomingItem.ModItem is VanityAccessory && incomingItem.type != Type)
+            {
+                return false;
+            }
+            return true;
         }
 
         public override void SetStaticDefaults()

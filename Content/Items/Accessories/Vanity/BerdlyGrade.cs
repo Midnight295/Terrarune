@@ -21,14 +21,6 @@ namespace Terrarune.Content.Items.Accessories.Vanity
             Item.vanity = true;
         }
 
-        public override bool CanAccessoryBeEquippedWith(Item equippedItem, Item incomingItem, Player player)
-        {
-            return incomingItem.type != ModContent.ItemType<FluffyHat>() &&
-                incomingItem.type != ModContent.ItemType<HornedHeadband>() &&
-                incomingItem.type != ModContent.ItemType<SusieChalk>() &&
-                incomingItem.type != ModContent.ItemType<KrisKnife>();
-        }
-
         public override void UpdateVanity(Player player)
         {
             player.Terrarune().BerdlyGrade = true;

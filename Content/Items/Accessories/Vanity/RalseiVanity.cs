@@ -77,15 +77,6 @@ namespace Terrarune.Content.Items.Accessories.Vanity
             if (!hideVisual)
                 player.Terrarune().HornedHeadband = true;
         }
-
-        public override bool CanAccessoryBeEquippedWith(Item equippedItem, Item incomingItem, Player player)
-        {   
-            return incomingItem.type != ModContent.ItemType<FluffyHat>() && 
-                incomingItem.type != ModContent.ItemType<KrisKnife>() && 
-                incomingItem.type != ModContent.ItemType<SusieChalk>() &&
-                incomingItem.type != ModContent.ItemType<BerdlyGrade>();
-        }
-
         public override bool CanRightClick() => true;
         public override bool AltFunctionUse(Player player)
         {

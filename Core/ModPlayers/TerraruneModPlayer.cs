@@ -22,7 +22,7 @@ namespace Terrarune.Core.ModPlayers
         public float UseStyleVar = 0f;
         SoundStyle SusieLaugh = new("Terrarune/Assets/Sounds/SusieLaugh");
 
-        ModItem currentVanityAccessory;
+        public ModItem currentVanityAccessory;
 
         public override void Load()
         {
