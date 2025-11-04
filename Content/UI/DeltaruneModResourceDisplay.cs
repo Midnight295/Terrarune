@@ -25,6 +25,11 @@ namespace Terrarune.Content.UI
         private Asset<Texture2D> ManaBar;
         private Asset<Texture2D> ManaFilling;
 
+        public override bool IsLoadingEnabled(Mod mod)
+        {
+            return false;
+        }
+
         public override void Load()
         {
             if (Main.dedServ)

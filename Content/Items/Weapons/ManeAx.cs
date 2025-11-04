@@ -15,6 +15,11 @@ namespace Terrarune.Content.Items.Weapons
     {
         public override string Texture => "Terrarune/Assets/Weapons/ManeAx";
 
+        public override bool IsLoadingEnabled(Mod mod)
+        {
+            return false;
+        }
+
         public override void SetDefaults()
         {
             Item.damage = 12;
