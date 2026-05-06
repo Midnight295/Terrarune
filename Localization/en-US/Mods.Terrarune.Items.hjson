@@ -94,3 +94,8 @@ SilverWatch: {
 	DisplayName: Wristwatch
 	Tooltip: "'Stuck before half past noon'"
 }
+
+DustyCRT: {
+	DisplayName: Dusty CRT
+	Tooltip: "'Coming to your house!'"
+}

@@ -12,6 +12,7 @@ namespace Terrarune.Core.ModPlayers
         public bool HornedHeadband;
         public bool BerdlyGrade;
         public bool SilverWatch;
+        public bool DustyCRT;
         public int SusieLaughCounter = 0;
         public int ItemUsedPreviousFrame = 0;
         //for usage in complex swings where you want to store an initial use rotation while animated player.itemRotation
@@ -55,6 +56,7 @@ namespace Terrarune.Core.ModPlayers
             HornedHeadband = false;
             BerdlyGrade = false;
             SilverWatch = false;
+            DustyCRT = false;
         }
         //attempt to make stuff work in multiplayer. did  work!!!.
         public override void SyncPlayer(int toWho, int fromWho, bool newPlayer)
