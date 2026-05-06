@@ -51,6 +51,7 @@ namespace Terrarune.Content.Items.Accessories.Vanity
         {
             CreateRecipe()
             .AddIngredient(ItemID.Silk, 15)
+            .AddTile(TileID.Loom)
             .Register();
         }
     }
