@@ -7,6 +7,7 @@ namespace Terrarune.Core.ModPlayers
     public class TerraruneModPlayer : ModPlayer
     {
         public bool KrisKnife;
+        public bool KrisLW;
         public bool SusieChalk;
         public bool FluffyHat;
         public bool HornedHeadband;
