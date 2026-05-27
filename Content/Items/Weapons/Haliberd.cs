@@ -35,6 +35,7 @@ namespace Terrarune.Content.Items.Weapons
             Item.value = Item.sellPrice(gold: 5);
             HaliberdUseStyle style = new();
             Item.SetStyle(style);
+            Item.knockBack = 7;
         }
         
     }
