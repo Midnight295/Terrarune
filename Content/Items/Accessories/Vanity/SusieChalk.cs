@@ -55,14 +55,6 @@ namespace Terrarune.Content.Items.Accessories.Vanity
             Item.rare = ItemRarityID.Purple;
             Item.vanity = true;
         }
-
-        public override bool CanAccessoryBeEquippedWith(Item equippedItem, Item incomingItem, Player player)
-        {
-            return incomingItem.type != ModContent.ItemType<FluffyHat>() &&
-                incomingItem.type != ModContent.ItemType<KrisKnife>() &&
-                incomingItem.type != ModContent.ItemType<HornedHeadband>();
-        }
-
         public override void UpdateVanity(Player player)
         {
             player.Terrarune().SusieChalk = true;
@@ -72,6 +64,15 @@ namespace Terrarune.Content.Items.Accessories.Vanity
         {
             if (!hideVisual)
                 player.Terrarune().SusieChalk = true;
+        }
+
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+            .AddIngredient(ItemID.StoneBlock, 35)
+            .AddIngredient(ItemID.ClayBlock, 15)
+            .AddTile(TileID.Anvils)
+            .Register();
         }
     }
 }

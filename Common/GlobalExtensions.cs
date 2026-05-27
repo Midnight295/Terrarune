@@ -11,6 +11,7 @@ namespace Terrarune.Common
     public static class GlobalExtensions
     {
         public static TerraruneModPlayer Terrarune(this Player player) => player.GetModPlayer<TerraruneModPlayer>();
+        public static VanityAccessoryPlayer Vanity(this Player player) => player.GetModPlayer<VanityAccessoryPlayer>();
         public static HeadAnimationPlayer HeadAnimationPlayer(this Player player) => player.GetModPlayer<HeadAnimationPlayer>();
         public static void SetStyle(this Item item, UseStyle style, bool alt = false)
         {

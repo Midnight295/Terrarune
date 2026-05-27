@@ -1,1 +1,19 @@
-This description will show up on the steam page, check out https://steamcommunity.com/comment/Guide/formattinghelp.
+A mod that adds various DELTARUNE related vanities!
+
+Currently adds vanity items based off of the Fun Gang members! And Berdly.
+
+Recipes:
+-Pie Knife: 15 Iron Bars and 3 Fruit at an Anvil
+-Tasty Chalk: 35 Stone Blocks and 15 Clay Blocks at an Anvil
+-Fluffy Hat: 15 Silk at a Loom.
+-Wristwatch: Silver Watch and 35 Snow Blocks at a Workbench.
+-A+ Test: 15 Silk at a Loom.
+-Dusty CRT: 10 Iron Bars and 15 Silk at an Anvil.
+
+Made with love by the following:
+Zarachard (https://twitter.com/Zarachard27)
+Blastitle
+midnight295
+Big E
+4bree (https://twitter.com/4bree)
+pil (https://twitter.com/pilchardheck777)

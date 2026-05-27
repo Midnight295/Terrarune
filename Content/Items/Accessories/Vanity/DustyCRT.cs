@@ -1,14 +1,17 @@
-﻿using Terrarune.Core.ModPlayers;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Terraria;
 using Terraria.ID;
 using Terrarune.Common;
-using Terraria.ModLoader;
 
 namespace Terrarune.Content.Items.Accessories.Vanity
 {
-    public class KrisKnife : VanityAccessory
+    public class DustyCRT : VanityAccessory
     {
-        public override string Texture => "Terrarune/Assets/Items/Vanity/KrisKnife/KrisKnife";
+        public override string Texture => "Terrarune/Assets/Items/Vanity/DustyCRT/DustyCRT";
 
         public override void SetDefaults()
         {
@@ -16,22 +19,23 @@ namespace Terrarune.Content.Items.Accessories.Vanity
             Item.rare = ItemRarityID.Red;
             Item.vanity = true;
         }
+
         public override void UpdateVanity(Player player)
         {
-            player.Terrarune().KrisKnife = true;
+            player.Terrarune().DustyCRT = true;
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             if (!hideVisual)
-                player.Terrarune().KrisKnife = true;
+                player.Terrarune().DustyCRT = true;
         }
 
         public override void AddRecipes()
         {
             CreateRecipe()
-            .AddRecipeGroup(RecipeGroupID.IronBar, 15)
-            .AddRecipeGroup(RecipeGroupID.Fruit, 3)
+            .AddRecipeGroup(RecipeGroupID.IronBar, 10)
+            .AddIngredient(ItemID.Glass, 15)
             .AddTile(TileID.Anvils)
             .Register();
         }
