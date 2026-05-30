@@ -6,9 +6,10 @@ namespace Terrarune.Core.ModPlayers
 {
     public class TerraruneModPlayer : ModPlayer
     {
+        public bool KrisCage;
         public bool KrisKnife;
-        public bool KrisLW;
         public bool SusieChalk;
+        public bool SusieHairbrush;
         public bool FluffyHat;
         public bool HornedHeadband;
         public bool BerdlyGrade;
@@ -52,6 +53,8 @@ namespace Terrarune.Core.ModPlayers
         public override void ResetEffects()
         {
             KrisKnife = false;
+            KrisCage = false;
+            SusieHairbrush = false;
             SusieChalk = false;
             FluffyHat = false;
             HornedHeadband = false;
