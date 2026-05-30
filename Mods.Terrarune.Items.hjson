@@ -117,3 +117,8 @@ KrisSword: {
 	DisplayName: Hero's Sword
 	Tooltip: "'A wooden practice blade with a carbon-reinforced core.'"
 }
+
+Jevilsknife: {
+	DisplayName: Jevilsknife
+	Tooltip: "Random Chaos"
+}
