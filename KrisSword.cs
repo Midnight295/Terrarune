@@ -34,7 +34,7 @@ namespace Terrarune.Assets.Weapons
 			Item.autoReuse = true;
 			Item.DamageType = DamageClass.Melee; 
 			Item.damage = 12; 
-			Item.knockBack = 9; 
+			Item.knockBack = 7; 
 			Item.crit = 6;
 			Item.noMelee = true;
 			Item.noUseGraphic = true;
