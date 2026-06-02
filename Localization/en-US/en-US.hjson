@@ -1,1 +1,12 @@
-Mods.Terrarune.ResourceDisplaySets.DeltaruneModResourceDisplay.DisplayName: Deltarune
+Mods: {
+	Terrarune: {
+		ResourceDisplaySets.DeltaruneModResourceDisplay.DisplayName: Deltarune
+
+		Buffs: {
+			LancerPetBuff: {
+				DisplayName: Lancer
+				Description: "'I'm the bad guy!'"
+			}
+		}
+	}
+}

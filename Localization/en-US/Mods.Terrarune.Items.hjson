@@ -18,7 +18,20 @@ KrisCage: {
 
 SusieChalk: {
 	DisplayName: Tasty Chalk
-	Tooltip: "'If only you had a jar of salsa to enjoy this with..'"
+	Tooltip: 
+	'''
+	Right click to turn into the Purple Hairbrush
+	'If only you had a jar of salsa to enjoy this with..'
+	'''
+}
+
+SusieHairbrush: {
+	DisplayName: Purple Hairbrush
+	Tooltip: 
+	'''
+	Right click to turn into the Tasty Chalk
+	'Used for the mane of a dragon whelp'
+	'''
 }
 
 ManeAx: {
@@ -120,5 +133,16 @@ KrisSword: {
 
 Jevilsknife: {
 	DisplayName: Jevilsknife
-	Tooltip: "Random Chaos"
+	Tooltip: Random Chaos
+}
+
+
+
+LancerPet: {
+	DisplayName: Jack of Spades
+	Tooltip: 
+	'''
+	Summons the prince of Card Castle
+	'Not to call a spade a spade. but he's a spade.'
+	'''
 }
