@@ -48,7 +48,7 @@ namespace Terrarune.Core.ModPlayers.DrawLayers
            
             Texture2D HornsTexture = ModContent.Request<Texture2D>("Terrarune/Assets/Items/Vanity/SilverWatch/SilverWatchHeadExtension", AssetRequestMode.ImmediateLoad).Value;
 
-            DrawData item = new(HornsTexture, Position, drawPlayer.bodyFrame, drawInfo.colorHead, drawInfo.drawPlayer.headRotation, drawInfo.headVect, 1f, drawInfo.playerEffect);
+            DrawData item = new DrawData(HornsTexture, Position, drawPlayer.bodyFrame, drawPlayer.GetImmuneAlphaPure(drawInfo.colorArmorBody, drawInfo.shadow), drawInfo.drawPlayer.headRotation, drawInfo.headVect, 1f, drawInfo.playerEffect);
             item.shader = drawInfo.cBody;
             drawInfo.DrawDataCache.Add(item);
         }
