@@ -116,9 +116,22 @@ HometownSweater: {
 	Tooltip: "'Theres a milk stain on it.."
 }
 
-SilverWatch: {
+NoelleWatch: {
 	DisplayName: Wristwatch
-	Tooltip: "'Stuck before half past noon'"
+	Tooltip:
+		'''
+		Right click to turn into the Holiday Pencil
+		'Stuck before half past noon'
+		'''
+}
+
+NoellePencil: {
+	DisplayName: Holiday Pencil
+	Tooltip:
+		'''
+		Right click to turn into the Silver Watch
+		'It's been borrowed before...'
+		'''
 }
 
 DustyCRT: {

@@ -13,7 +13,8 @@ namespace Terrarune.Core.ModPlayers
         public bool FluffyHat;
         public bool HornedHeadband;
         public bool BerdlyGrade;
-        public bool SilverWatch;
+        public bool NoelleWatch;
+        public bool NoellePencil;
         public bool DustyCRT;
         public int SusieLaughCounter = 0;
         public int ItemUsedPreviousFrame = 0;
@@ -59,7 +60,8 @@ namespace Terrarune.Core.ModPlayers
             FluffyHat = false;
             HornedHeadband = false;
             BerdlyGrade = false;
-            SilverWatch = false;
+            NoelleWatch = false;
+            NoellePencil = false;
             DustyCRT = false;
         }
         //attempt to make stuff work in multiplayer. did  work!!!.

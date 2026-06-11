@@ -23,7 +23,7 @@ namespace Terrarune.Core.ModPlayers.DrawLayers
             if (drawInfo.shadow != 0)
                 return false;
 
-           if (!player.Terrarune().SilverWatch)
+           if (!player.Terrarune().NoelleWatch && !player.Terrarune().NoellePencil)
                 return false;
 
             return true;
@@ -46,7 +46,8 @@ namespace Terrarune.Core.ModPlayers.DrawLayers
                 drawInfo.headVect +
                 new Vector2(0, -14) * drawPlayer.gravDir;
            
-            Texture2D HornsTexture = ModContent.Request<Texture2D>("Terrarune/Assets/Items/Vanity/SilverWatch/SilverWatchHeadExtension", AssetRequestMode.ImmediateLoad).Value;
+            Texture2D HornsTexture = ModContent.Request<Texture2D>("Terrarune/Assets/Items/Vanity/NoelleWatch/NoelleWatchHeadExtension", AssetRequestMode.ImmediateLoad).Value;
+            Texture2D HornsTextureLW = ModContent.Request<Texture2D>("Terrarune/Assets/Items/Vanity/NoellePencil/NoellePencilHeadExtension", AssetRequestMode.ImmediateLoad).Value;
 
             DrawData item = new DrawData(HornsTexture, Position, drawPlayer.bodyFrame, drawPlayer.GetImmuneAlphaPure(drawInfo.colorArmorBody, drawInfo.shadow), drawInfo.drawPlayer.headRotation, drawInfo.headVect, 1f, drawInfo.playerEffect);
             item.shader = drawInfo.cBody;
